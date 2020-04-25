@@ -14,13 +14,10 @@ namespace MusicTour.DataAccess.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        //Название группы
         public string Name { get; set; }
 
-        //Состав
         public ICollection<string> Members { get; } = new List<string>();
 
-        //Жанр
         public string Genre { get; set; }
 
         public virtual ICollection<Concert> Concert { get; set; }

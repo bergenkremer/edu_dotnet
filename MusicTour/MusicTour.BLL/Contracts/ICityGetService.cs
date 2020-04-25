@@ -9,6 +9,6 @@ namespace MusicTour.BLL.Contracts
     {
         Task<IEnumerable<City>> GetAsync();
         Task<City> GetAsync(ICityIdentity city);
-        Task ValidateAsync(ICityContainer departmentContainer);
+        Task ValidateAsync(ICityContainer cityContainer);
     }
 }

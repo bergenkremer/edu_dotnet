@@ -40,9 +40,9 @@ namespace MusicTour.BLL.Implementation
                 throw new InvalidOperationException($"Concert not found by id {concertContainer.ConcertId}");
             }
         }
-        private Task<Concert> GetBy(IConcertContainer departmentContainer)
+        private Task<Concert> GetBy(IConcertContainer concertContainer)
         {
-            return this.ConcertDataAccess.GetByAsync(departmentContainer);
+            return this.ConcertDataAccess.GetByAsync(concertContainer);
         }
     }
 }

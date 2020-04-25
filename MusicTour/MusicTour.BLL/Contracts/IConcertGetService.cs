@@ -9,6 +9,6 @@ namespace MusicTour.BLL.Contracts
     {
         Task<IEnumerable<Concert>> GetAsync();
         Task<Concert> GetAsync(IConcertIdentity concert);
-        Task ValidateAsync(IConcertContainer departmentContainer);
+        Task ValidateAsync(IConcertContainer concertContainer);
     }
 }

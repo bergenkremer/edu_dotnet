@@ -11,7 +11,7 @@ namespace MusicTour.DataAccess.Contracts
         Task<IEnumerable<City>> GetAsync();
         Task<City> GetAsync(ICityIdentity cityId);
         Task<City> UpdateAsync(CityUpdateModel city);
-        Task<City> GetByAsync(ICityContainer departmentId);
+        Task<City> GetByAsync(ICityContainer cityId);
 
     }
 }
