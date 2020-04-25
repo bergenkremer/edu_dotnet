@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.WebAPI", "MusicTour.WebAPI\MusicTour.WebAPI.csproj", "{C661F92E-3507-4892-91B0-75C51519E9E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.Domain", "MusicTour.Domain\MusicTour.Domain.csproj", "{2342481D-6646-42DA-BDB1-0E8651E71DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.DataAccess", "MusicTour.DataAccess\MusicTour.DataAccess.csproj", "{84F76A0D-AF92-42D6-8A32-CBF424DE11C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.Client", "MusicTour.Client\MusicTour.Client.csproj", "{373A5432-D63D-430D-B1F2-735C19FF4132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.BLL", "MusicTour.BLL\MusicTour.BLL.csproj", "{AA480C31-10CC-44DD-B1DC-14EB32318523}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicTour.BLL.Tests", "MusicTour.BLL.Tests\MusicTour.BLL.Tests.csproj", "{991F803C-B20B-4713-92FE-FD1F5CAD95F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C661F92E-3507-4892-91B0-75C51519E9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C661F92E-3507-4892-91B0-75C51519E9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C661F92E-3507-4892-91B0-75C51519E9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C661F92E-3507-4892-91B0-75C51519E9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2342481D-6646-42DA-BDB1-0E8651E71DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2342481D-6646-42DA-BDB1-0E8651E71DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2342481D-6646-42DA-BDB1-0E8651E71DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2342481D-6646-42DA-BDB1-0E8651E71DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F76A0D-AF92-42D6-8A32-CBF424DE11C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F76A0D-AF92-42D6-8A32-CBF424DE11C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F76A0D-AF92-42D6-8A32-CBF424DE11C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F76A0D-AF92-42D6-8A32-CBF424DE11C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373A5432-D63D-430D-B1F2-735C19FF4132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373A5432-D63D-430D-B1F2-735C19FF4132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373A5432-D63D-430D-B1F2-735C19FF4132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373A5432-D63D-430D-B1F2-735C19FF4132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA480C31-10CC-44DD-B1DC-14EB32318523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA480C31-10CC-44DD-B1DC-14EB32318523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA480C31-10CC-44DD-B1DC-14EB32318523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA480C31-10CC-44DD-B1DC-14EB32318523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991F803C-B20B-4713-92FE-FD1F5CAD95F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991F803C-B20B-4713-92FE-FD1F5CAD95F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991F803C-B20B-4713-92FE-FD1F5CAD95F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991F803C-B20B-4713-92FE-FD1F5CAD95F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {958ECD84-18DA-4B94-866E-591E71F64690}
+	EndGlobalSection
+EndGlobal
