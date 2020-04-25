@@ -1,9 +1,0 @@
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\bin\Debug\netcoreapp3.1\MusicTour.Domain.deps.json
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\bin\Debug\netcoreapp3.1\MusicTour.Domain.dll
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\bin\Debug\netcoreapp3.1\MusicTour.Domain.pdb
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.csprojAssemblyReference.cache
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.csproj.CoreCompileInputs.cache
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.AssemblyInfoInputs.cache
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.AssemblyInfo.cs
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.dll
-C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Domain\obj\Debug\netcoreapp3.1\MusicTour.Domain.pdb
