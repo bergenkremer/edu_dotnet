@@ -6,3 +6,4 @@ C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Client\obj\Debug\netco
 C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Client\obj\Debug\netcoreapp3.1\MusicTour.Client.AssemblyInfo.cs
 C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Client\obj\Debug\netcoreapp3.1\MusicTour.Client.dll
 C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Client\obj\Debug\netcoreapp3.1\MusicTour.Client.pdb
+C:\Users\puppycat\source\repos\dotnet\MusicTour\MusicTour.Client\obj\Debug\netcoreapp3.1\MusicTour.Client.csprojAssemblyReference.cache

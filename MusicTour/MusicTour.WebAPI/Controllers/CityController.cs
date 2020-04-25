@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 namespace MusicTour.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/cinema")]
+    [Route("api/city")]
     public class CityController
     {
         private ILogger<CityController> Logger { get; }
@@ -23,33 +23,33 @@ namespace MusicTour.WebAPI.Controllers
         private ICityUpdateService CityUpdateService { get; }
         private IMapper Mapper { get; }
 
-        public CityController(ILogger<CityController> logger, IMapper mapper, ICityCreateService cinemaCreateService, ICityGetService cinemaGetService, ICityUpdateService cinemaUpdateService)
+        public CityController(ILogger<CityController> logger, IMapper mapper, ICityCreateService cityCreateService, ICityGetService cityGetService, ICityUpdateService cityUpdateService)
         {
             this.Logger = logger;
-            this.CityCreateService = cinemaCreateService;
-            this.CityGetService = cinemaGetService;
-            this.CityUpdateService = cinemaUpdateService;
+            this.CityCreateService = cityCreateService;
+            this.CityGetService = cityGetService;
+            this.CityUpdateService = cityUpdateService;
             this.Mapper = mapper;
         }
 
         [HttpPut]
         [Route("")]
-        public async Task<CityDTO> PutAsync(CityCreateDTO cinema)
+        public async Task<CityDTO> PutAsync(CityCreateDTO city)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.CityCreateService.CreateAsync(this.Mapper.Map<CityUpdateModel>(cinema));
+            var result = await this.CityCreateService.CreateAsync(this.Mapper.Map<CityUpdateModel>(city));
 
             return this.Mapper.Map<CityDTO>(result);
         }
 
         [HttpPatch]
         [Route("")]
-        public async Task<CityDTO> PatchAsync(CityUpdateDTO cinema)
+        public async Task<CityDTO> PatchAsync(CityUpdateDTO city)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.CityUpdateService.UpdateAsync(this.Mapper.Map<CityUpdateModel>(cinema));
+            var result = await this.CityUpdateService.UpdateAsync(this.Mapper.Map<CityUpdateModel>(city));
 
             return this.Mapper.Map<CityDTO>(result);
         }
@@ -64,12 +64,12 @@ namespace MusicTour.WebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{cinemaId}")]
-        public async Task<CityDTO> GetAsync(int cinemaId)
+        [Route("{cityId}")]
+        public async Task<CityDTO> GetAsync(int cityId)
         {
-            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {cinemaId}");
+            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {cityId}");
 
-            return this.Mapper.Map<CityDTO>(await this.CityGetService.GetAsync(new CityIdentityModel(cinemaId)));
+            return this.Mapper.Map<CityDTO>(await this.CityGetService.GetAsync(new CityIdentityModel(cityId)));
         }
     }
 }

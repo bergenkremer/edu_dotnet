@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 namespace MusicTour.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/screening")]
+    [Route("api/concert")]
     public class ConcertController
     {
         private ILogger<ConcertController> Logger { get; }
@@ -23,33 +23,33 @@ namespace MusicTour.WebAPI.Controllers
         private IConcertUpdateService ConcertUpdateService { get; }
         private IMapper Mapper { get; }
 
-        public ConcertController(ILogger<ConcertController> logger, IMapper mapper, IConcertCreateService screeningCreateService, IConcertGetService screeningGetService, IConcertUpdateService screeningUpdateService)
+        public ConcertController(ILogger<ConcertController> logger, IMapper mapper, IConcertCreateService concertCreateService, IConcertGetService concertGetService, IConcertUpdateService concertUpdateService)
         {
             this.Logger = logger;
-            this.ConcertCreateService = screeningCreateService;
-            this.ConcertGetService = screeningGetService;
-            this.ConcertUpdateService = screeningUpdateService;
+            this.ConcertCreateService = concertCreateService;
+            this.ConcertGetService = concertGetService;
+            this.ConcertUpdateService = concertUpdateService;
             this.Mapper = mapper;
         }
 
         [HttpPut]
         [Route("")]
-        public async Task<ConcertDTO> PutAsync(ConcertCreateDTO screening)
+        public async Task<ConcertDTO> PutAsync(ConcertCreateDTO concert)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.ConcertCreateService.CreateAsync(this.Mapper.Map<ConcertUpdateModel>(screening));
+            var result = await this.ConcertCreateService.CreateAsync(this.Mapper.Map<ConcertUpdateModel>(concert));
 
             return this.Mapper.Map<ConcertDTO>(result);
         }
 
         [HttpPatch]
         [Route("")]
-        public async Task<ConcertDTO> PatchAsync(ConcertUpdateDTO screening)
+        public async Task<ConcertDTO> PatchAsync(ConcertUpdateDTO concert)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.ConcertUpdateService.UpdateAsync(this.Mapper.Map<ConcertUpdateModel>(screening));
+            var result = await this.ConcertUpdateService.UpdateAsync(this.Mapper.Map<ConcertUpdateModel>(concert));
 
             return this.Mapper.Map<ConcertDTO>(result);
         }
@@ -64,12 +64,12 @@ namespace MusicTour.WebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{screeningId}")]
-        public async Task<ConcertDTO> GetAsync(int screeningId)
+        [Route("{concertId}")]
+        public async Task<ConcertDTO> GetAsync(int concertId)
         {
-            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {screeningId}");
+            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {concertId}");
 
-            return this.Mapper.Map<ConcertDTO>(await this.ConcertGetService.GetAsync(new ConcertIdentityModel(screeningId)));
+            return this.Mapper.Map<ConcertDTO>(await this.ConcertGetService.GetAsync(new ConcertIdentityModel(concertId)));
         }
     }
 }

@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 namespace MusicTour.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/movie")]
+    [Route("api/band")]
     public class BandController : ControllerBase
     {
         private ILogger<BandController> Logger { get; }
@@ -23,33 +23,33 @@ namespace MusicTour.WebAPI.Controllers
         private IBandUpdateService BandUpdateService { get; }
         private IMapper Mapper { get; }
 
-        public BandController(ILogger<BandController> logger, IMapper mapper, IBandCreateService movieCreateService, IBandGetService movieGetService, IBandUpdateService movieUpdateService)
+        public BandController(ILogger<BandController> logger, IMapper mapper, IBandCreateService bandCreateService, IBandGetService bandGetService, IBandUpdateService bandUpdateService)
         {
             this.Logger = logger;
-            this.BandCreateService = movieCreateService;
-            this.BandGetService = movieGetService;
-            this.BandUpdateService = movieUpdateService;
+            this.BandCreateService = bandCreateService;
+            this.BandGetService = bandGetService;
+            this.BandUpdateService = bandUpdateService;
             this.Mapper = mapper;
         }
 
         [HttpPut]
         [Route("")]
-        public async Task<BandDTO> PutAsync(BandCreateDTO movie)
+        public async Task<BandDTO> PutAsync(BandCreateDTO band)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.BandCreateService.CreateAsync(this.Mapper.Map<BandUpdateModel>(movie));
+            var result = await this.BandCreateService.CreateAsync(this.Mapper.Map<BandUpdateModel>(band));
 
             return this.Mapper.Map<BandDTO>(result);
         }
 
         [HttpPatch]
         [Route("")]
-        public async Task<BandDTO> PatchAsync(BandUpdateDTO movie)
+        public async Task<BandDTO> PatchAsync(BandUpdateDTO band)
         {
             this.Logger.LogTrace($"{nameof(this.PutAsync)} called");
 
-            var result = await this.BandUpdateService.UpdateAsync(this.Mapper.Map<BandUpdateModel>(movie));
+            var result = await this.BandUpdateService.UpdateAsync(this.Mapper.Map<BandUpdateModel>(band));
 
             return this.Mapper.Map<BandDTO>(result);
         }
@@ -64,12 +64,12 @@ namespace MusicTour.WebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{movieId}")]
-        public async Task<BandDTO> GetAsync(int movieId)
+        [Route("{bandId}")]
+        public async Task<BandDTO> GetAsync(int bandId)
         {
-            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {movieId}");
+            this.Logger.LogTrace($"{nameof(this.GetAsync)} called for {bandId}");
 
-            return this.Mapper.Map<BandDTO>(await this.BandGetService.GetAsync(new BandIdentityModel(movieId)));
+            return this.Mapper.Map<BandDTO>(await this.BandGetService.GetAsync(new BandIdentityModel(bandId)));
         }
     }
 }
